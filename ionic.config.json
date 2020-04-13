@@ -1,0 +1,7 @@
+{
+  "name": "CardMobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
