@@ -13,14 +13,21 @@ import { firebaseConfig } from '../environments/firebaseconfig';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule} from '@angular/fire/firestore';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   //Agregamos las dependencias importadas a imports
   //Una vez agregado las dependencias creamos un servio con el comando cli (ionic g service services/auth)
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(firebaseConfig),
-            AngularFireAuthModule, AngularFirestoreModule],
+  imports: [BrowserModule, 
+            IonicModule.forRoot(), 
+            AppRoutingModule, 
+            AngularFireModule.initializeApp(firebaseConfig),
+            AngularFireAuthModule, 
+            AngularFirestoreModule,
+            ComponentsModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,
